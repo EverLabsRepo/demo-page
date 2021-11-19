@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/demoPage.css">
+  <title>Browsi Demo Page</title>
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="style/blog.css" rel="stylesheet">
+  <link href="style/device.css" rel="stylesheet">
+  The player script (with floater unit):
+  <script async src="https://cdn.avantisvideo.com/avm/js/video-loader.js?id=4102c20e-d414-456e-897a-9a26f6d87257&tagId=98" id="avantisJS"> </script>
+  The player script (without floater unit):
+  <script async src="https://cdn.avantisvideo.com/avm/js/video-loader.js?id=4102c20e-d414-456e-897a-9a26f6d87257&tagId=99" id="avantisJS"> </script>
+  <script>
+    function getDevice(selectObject) {
+      if (selectObject.value === 'mobile')
+      document.getElementById('body').classList.add('mobile')
+      else document.getElementById('body').classList.remove('mobile');
+    }
+  </script>
+</head>
+
+<body
+  class="post-template-default single single-post postid-2704551 single-format-standard py-5 singular category-ai channel-ai AI"
+  onload="changeRunType(0)" id="body">
+<div id="engineConfiguration">
+  <a href="https://demo.browsiprod.com/"><img src="pics/logo.png" style="height: 25px; margin-right: 25px;"></a>
+  <p>User type:</p>
+  <select name="runType" onchange="changeRunType(this.selectedIndex)" id="runTypeBar" disabled>
+    <option value="fastScroller">Fast Scroller</option>
+    <option value="slowScroller">Slow Scroller</option>
+    <option value="slowInternet">Slow Internet</option>
+    <option value="nonHuman">Non-Human</option>
+  </select>
+  <div id="dataPointContainer">
+    <p class='dataPoint' style='display:none;'>Spots found:</p>
+    <span class="dataPointValue" id="dataPointValueSpotsFound" style='display:none;'>0</span>
+    <p class='dataPoint'>Ads per page:</p>
+    <span class="dataPointValue" id="dataPointValueAdsPerPage">0</span>
+    <p class='dataPoint'>Ad requests per page:</p>
+    <span class="dataPointValue" id="dataPointValueAdRequestsPerPage">0</span>
+    <p class='dataPoint'>Network speed:</p>
+    <span class="dataPointValue" id="dataPointValueNetworkSpeed">NA</span>
+    <p class='dataPoint'>Scroll speed:</p>
+    <span class="dataPointValue" id="dataPointValueScrollSpeed">0</span>
+  </div>
+  <label class="floater" for="floater">Floater</label>
+  <input type="checkbox" id="floater" name="floater">
+  <p class="dataPoint">Device</p>
+  <select name="deviceType" id="deviceTypeBar" class="deviceTypeBar" onchange="getDevice(this)">
+    <option value="desktop">Desktop</option>
+    <option value="mobile">Mobile</option>
+  </select>
+</div>
+
+
+<div class="container-fluid">
+  <header class="blog-header">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+    </div>
+  </header>
+
+  <main class="container-fluid p-0">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+      <browsiTopAd
+        style="margin:auto; margin-top:15px; width: 728px; height:90px; background-image: url('pics/728x90ATop.png'); display: none;">
+      </browsiTopAd>
+      <div class="col-md px-0">
+        <h1 class="display-4 header">Duke Energy used computer vision and robots to cut costs by $74M</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="position-sticky" style="top: 2rem;">
+          <aside id="leftRail" class="browsiRail"
+                 style="float: left; width:300px; background-image: url('pics/300x600ARail.png');"></aside>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+
+        <article class="blog-post">
+          <p>Duke Energy’s AI journey began because the utility company had a business problem to
+            solve,  Duke Energy chief information officer Bonnie Titone told VentureBeat’s head of
+            AI content strategy Hari Sivaraman at the <a href="https://venturebeat.com/tag/Transform-2021">Transform
+              2021 virtual
+              conference</a> on Thursday.</p>
+
+          <p>Duke Energy was facing some significant challenges, such as the growing issue of <a
+            href="https://venturebeat.com/2020/10/31/how-technology-and-policy-can-mitigate-climate-effects-in-an-age-of-colliding-crises/">climate
+            change</a> and the need to transition to clean energy in order to reach net zero
+            emissions by 2050. Duke Energy is considered an essential service, as it supplies 25
+            million people with electricity daily, and everything the <a
+              href="https://venturebeat.com/2021/07/07/transform-2021-manufacturings-key-themes/">utility
+              company</a> does revolves around a culture of safety and reliability. The variables
+            together was a catalyst for exploring AI technologies, Titone said, because whatever the
+            company chose to do, it had to support the clean energy transition, deliver value to
+            customers, <em>and</em> find a way for employees to work and improve safety.</p>
+          <div id="notHumanImg">
+          </div>
+
+          <p>“We look to emerging data science tools and AI solutions, which in turn brought us to
+            computer vision, and ultimately, drones in order to inspect our solar farms,” Titone
+            said.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>There is a significant amount of solar farms in the shift to clean energy — Florida alone
+            has 3 million solar panels, Titone said — and inspecting them is a very labor-intensive,
+            time-consuming, and risky endeavor. It can take about 40 hours to inspect one unit, and
+            a relar solar site may have somewhere between 20 and 25 units to inspect. It’s a
+            dangerous task, as technicians walk around 500-acre solar sites with heat guns so they
+
+            can inspect the panels and may need to touch live wires. The company began experimenting
+            with advanced drones with infrared cameras to try to streamline the work. The
+            technicians were able to use the images taken by the drones to determine where they’re
+            seeing faults and issues. Thousands of images were stitched together with computer
+            vision, giving technicians the ability to look for issues using the images in a much
+            safer way, Titone said.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>After finding the computer vision, Duke Energy began to consider automating the process.
+            The company developed a MOVES model (Mobile Observation Vehicle and Equipment Solutions)
+            that collects and processes the data and images from the drones and identifies the
+            faults within minutes. Through applying AI and machine learning technologies, the
+            program has significantly reduced labor and time costs for the company. Accuracy also
+            continued to improve over the time; the latest model used in the inspection reached 91%
+            accuracy.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>“We compiled that information for the technicians and gave them the ability to navigate
+            pretty easily to where we can schedule maintenance for customers, and we did this all
+            without a technician ever having to go out to the site,” Titone said. The program has
+            led to more than $74 million reductions in cost and 385,000 in man-hours.</p>
+
+          <h2>Cloud and edge processing</h2>
+
+          <p>Duke Energy had to consider the question of how to process the data the drones were
+            collecting. A typical drone flight can produce thousands of photos, sometimes with no
+            precise location data associated with the images. Trying to do the analysis in the cloud
+            to figure out if the drone image showed a solar site would be impossible because of the
+            sheer amount of data and information involved. Duke Energy had to process the images at
+            the edge so that it could make real-time decisions. The images had to be stitched
+            together to make a precise picture of the solar farm without having to require somebody
+            go and actually walk around the site.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>Instead of trying to do everything at once, Duke Energy worked on small increments of the
+            project. Once one thing worked, the team moved on to the next step. Since Duke Energy
+            had its own software engineering team, it was able to build its own models with its own
+            methodologies as part of a one-stop shop. This process eventually led to creating over
+            40 products.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>Titone said, “Had we not had that footprint in the cloud journey, we wouldn’t have been
+            able to develop these models and be able to process that data as quickly as we could.”
+          </p>
+
+          <h2>Working with data</h2>
+
+          <p>Titone also discussed best practices with storing and cleaning data. As the team has
+            moved toward a cloud-based data strategy, it uses a lot of <a
+              href="https://venturebeat.com/2021/04/28/understanding-when-to-use-a-database-data-lake-or-data-warehouse/">data
+              lakes</a>. The data lakes are accessible by other systems and also by some data
+            analysis and data science components that must quickly process the information.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>“I would say we’re using a lot of the traditional methods around data lakes in order to
+            process all of that,” Titone said, and the team models the data with “what we call our
+            MATLAB, which stands for machine learning, AI and deep learning."
+            “We compiled that information for the technicians and gave them the ability to navigate
+            pretty easily to where we can schedule maintenance for customers, and we did this all
+            without a technician ever having to go out to the site,” Titone said. The program has
+            led to more than $74 million reductions in cost and 385,000 in man-hours.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>Reflecting upon the high accuracy that the product reached, Titone said that it was
+            important to be OK with failing in the beginning. “I think at the beginning of the
+            journey, we didn’t have an expectation that we would get right out of the gate,” she
+            said. As time moved on, the team learned and continued to modify the model according to
+            the results. For example, in the journey with iterations and reflections, the team
+            realized that they should not only extract images but piece different processing
+            techniques together. They also adjusted the angle and height of the drone.</p>
+
+          <h2>AI as a career opportunity</h2>
+
+          <p>The fact that AI is more efficient and cost-effective does result in <a
+            href="https://venturebeat.com/2020/08/17/how-robotics-and-automation-could-create-new-jobs-in-the-new-normal/">reduced
+            labor hours</a>, which raises the concern that AI is taking jobs away from people.
+            Titone said the better perspective was to view this as an opportunity. She said that
+            upskilling employees to be able to work with AI was an investment in the workforce. If
+            the employees understand AI, she said, they become more valuable as workers because they
+            qualify for more advanced roles.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>“I never approach AI as taking somebody’s job or role; the way I’ve always approached AI
+            is that it should complement our workforce, that it should give us a set of skills and
+            career paths that our teammates can take,” Titone said.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>Duke Energy was facing some significant challenges, such as the growing issue of <a
+            href="https://venturebeat.com/2020/10/31/how-technology-and-policy-can-mitigate-climate-effects-in-an-age-of-colliding-crises/">climate
+            change</a> and the need to transition to clean energy in order to reach net zero
+            emissions by 2050. Duke Energy is considered an essential service, as it supplies 25
+            million people with electricity daily, and everything the <a
+              href="https://venturebeat.com/2021/07/07/transform-2021-manufacturings-key-themes/">utility
+              company</a> does revolves around a culture of safety and reliability. The variables
+            together was a catalyst for exploring AI technologies, Titone said, because whatever the
+            company chose to do, it had to support the clean energy transition, deliver value to
+            customers, <em>and</em> find a way for employees to work and improve safety.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>“We look to emerging data science tools and AI solutions, which in turn brought us to
+            computer vision, and ultimately, drones in order to inspect our solar farms,” Titone
+            said.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>There is a significant amount of solar farms in the shift to clean energy — Florida alone
+            has 3 million solar panels, Titone said — and inspecting them is a very labor-intensive,
+            time-consuming, and risky endeavor. It can take about 40 hours to inspect one unit, and
+            a regular solar site may have somewhere between 20 and 25 units to inspect. It’s a
+            dangerous task, as technicians walk around 500-acre solar sites with heat guns so they
+            can inspect the panels and may need to touch live wires. The company began experimenting
+            with advanced drones with infrared cameras to try to streamline the work. The
+            technicians were able to use the images taken by the drones to determine where they’re
+            seeing faults and issues. Thousands of images were stitched together with computer
+            vision, giving technicians the ability to look for issues using the images in a much
+            safer way, Titone said.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>Duke Energy had to consider the question of how to process the data the drones were
+            collecting. A typical drone flight can produce thousands of photos, sometimes with no
+            precise location data associated with the images. Trying to do the analysis in the cloud
+            to figure out if the drone image showed a solar site would be impossible because of the
+            sheer amount of data and information involved. Duke Energy had to process the images at
+            the edge so that it could make real-time decisions. The images had to be stitched
+            together to make a precise picture of the solar farm without having to require somebody
+            go and actually walk around the site.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>Instead of trying to do everything at once, Duke Energy worked on small increments of the
+            project. Once one thing worked, the team moved on to the next step. Since Duke Energy
+            had its own software engineering team, it was able to build its own models with its own
+            methodologies as part of a one-stop shop. This process eventually led to creating over
+            40 products.</p>
+
+          <browsispot>
+            <div></div>
+          </browsispot>
+
+          <p>After finding the computer vision, Duke Energy began to consider automating the process.
+            The company developed a MOVES model (Mobile Observation Vehicle and Equipment Solutions)
+            that collects and processes the data and images from the drones and identifies the
+            faults within minutes. Through applying AI and machine learning technologies, the
+            program has significantly reduced labor and time costs for the company. Accuracy also
+            continued to improve over the time; the latest model used in the inspection reached 91%
+            accuracy.
+            Duke Energy’s AI journey began because the utility company had a business problem to
+            solve,  Duke Energy chief information officer Bonnie Titone told VentureBeat’s head of
+            AI content strategy Hari Sivaraman at the <a href="https://venturebeat.com/tag/Transform-2021">Transform
+              2021 virtual
+              conference</a> on Thursday.
+          </p>
+        </article>
+      </div>
+
+      <div class="col-md-3">
+        <div class="position-sticky" style="top: 2rem;">
+          <aside id="rightRail" class="browsiRail"
+                 style="float: right; width:300px; background-image: url('pics/300x600CRail.png'); "></aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="blog-footer">
+    <p>© All rights reserved to <a href="https://gobrowsi.com/">Browsi</a></p>
+    <p>
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
+
+  <script src="demoPage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+
+.mobile, .mobile #engineConfiguration {
+  max-width: 375px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mobile .col-md-3 {
+  width: 0;
+}
+.mobile .col-md-6 {
+  width: 100%;
+}
