@@ -1,23 +1,23 @@
-#engineConfiguration{
+.engineConfiguration{
   position: fixed;
   display: block;
   width: 100%;
   top: 0px;
-  padding: 10px 15px 5px 15px;
+  padding: 10px 15px 25px;
   text-align: left;
   background: #fafafb;
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
   z-index: 999;
 }
-#engineConfiguration>p{
+.engineConfiguration>p{
   display:inline;
 }
-#engineConfiguration>select{
+.engineConfiguration>select{
   display:inline;
   border-radius: 4px;
   min-height: 25px;
 }
-#engineConfiguration>select:enabled{
+.engineConfiguration>select:enabled{
   outline-color:rgb(146, 146, 255);
 }
 
@@ -53,40 +53,34 @@ span.dataPointValue{
   margin-right: 7px;
 }
 
-/* Specific to VentureBeat */
 div#primary{
   margin: 0px !important;
   padding: 0px !important;
-}
-
-.browsiRail{
-  top: 100px;
-  position: sticky;
-  height: 600px;
-  display: none;
-  background-repeat: no-repeat;
-  margin: 50px;
 }
 
 .blog-post {
   padding: 1em;
 }
 
-.blog-post p {
+.blog-post p, .blog-post h1 {
   font-family: Merriweather,Georgia,Times New Roman,Times,serif;
-  font-size: 1.2em;
-  line-height: 2em;
+  font-size: 17px;
+  line-height: 38px;
 }
 
 .container-fluid {
   /* padding-right:0; */
   padding-left:0;
   margin-right:auto;
-  margin-left:auto
+  margin-left:auto;
+  margin-top: 50px;
 }
 
-h1 {
-  margin-top: 50px;
+.blog-post h1 {
+  font-family: Merriweather,Georgia,Times New Roman,Times,serif;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: normal;
 }
 
 .header {
@@ -98,23 +92,33 @@ h1 {
   font-size: 10px;
 }
 
-/* for laptops */
-@media screen
-and (min-device-width: 1200px)
-and (max-device-width: 1600px)
-and (-webkit-min-device-pixel-ratio: 1) {
-
-  #rightRail {
-    margin: 50px 15px 50px 50px;
-    /* background-image: url('/pics/300x250A.png') !important; */
-  }
-
-  #leftRail {
-    margin: 50px 15px;
-    /* background-image: url('/pics/300x250A.png') !important; */
-  }
-}
-
 .floater {
   font-size: 10px;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.robotImg {
+  margin: 40px;
+  width: calc(100% - 80px);
+  height: auto;
+}
+
+.robotImg img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.cite {
+  margin: 14px 0 16px;
+  font-size: 14px;
+  line-height: 38px;
+  font-style: italic;
 }
