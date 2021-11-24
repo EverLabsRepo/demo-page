@@ -34,8 +34,10 @@ const onLoadPage = () => {
   let type = +localStorage.getItem('typeIndex');
   if (!JSON.parse(localStorage.getItem('floater'))) {
     createScript(types[type], FLOATER);
+    sessionStorage.setItem('d_avnts_target', {tag: 98})
   } else {
     createScript(types[type], NO_FLOATER);
+    sessionStorage.setItem('d_avnts_target', {tag: 99})
   }
   floater.checked = JSON.parse(localStorage.getItem('floater'));
   runType.selectedIndex = type;
