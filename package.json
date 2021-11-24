@@ -1,9 +1,10 @@
 {
-  "name": "dangeon-girl",
+  "name": "demo-page",
   "version": "0.0.1",
   "description": "",
   "license": "",
   "author": "",
+  "source": "./index.html",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",

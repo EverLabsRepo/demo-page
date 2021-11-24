@@ -2,10 +2,15 @@
 .mobile, .mobile #engineConfiguration {
   max-width: 375px;
   margin: 0 auto;
+  padding-bottom: 10px;
 }
 .mobile .col-md-3 {
   width: 0;
 }
 .mobile .col-md-6 {
   width: 100%;
+}
+
+.mobile .container-fluid {
+  margin-top: 124px;
 }

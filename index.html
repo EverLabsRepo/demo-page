@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-store, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style/demoPage.css">
@@ -21,7 +24,7 @@
 
   <body
     class="post-template-default single single-post postid-2704551 single-format-standard singular category-ai channel-ai AI"
-    onload="changeVideoType(0)" id="body">
+    onload="onLoadPage()" id="body">
   <div id="engineConfiguration" class="engineConfiguration">
     <p>User type:</p>
     <select name="runType" onchange="changeVideoType()" id="runTypeBar">
@@ -43,7 +46,7 @@
       <span class="dataPointValue" id="dataPointValueScrollSpeed">0</span>
     </div>
     <label class="floater" for="floater">Floater</label>
-    <input type="checkbox" id="floater" name="floater">
+    <input type="checkbox" id="floater" name="floater" onclick="onClickFloater()" >
     <p class="dataPoint">Device</p>
     <select name="deviceType" id="deviceTypeBar" class="deviceTypeBar" onchange="getDevice(this)">
       <option value="desktop">Desktop</option>
@@ -87,9 +90,7 @@
       <p class="mb-3">
       Titone said, “Had we not had that footprint in the cloud journey, we wouldn’t have been able to develop these models and be able to process that data as quickly as we could.”
       </p>
-      <div id="fastScroller">
-        <script async src="https://cdn.avantisvideo.com/avm/js/video-loader.js?id=4102c20e-d414-456e-897a-9a26f6d87257&tagId=99" id="avantisJS"> </script>
-      </div>
+      <div id="fastScroller"></div>
       <h1>Working with data</h1>
       <p class="mb-3">
       Titone also discussed best practices with storing and cleaning data. As the team has moved toward a cloud-based data strategy, it uses a lot of data lakes. The data lakes are accessible by other systems and also by some data analysis and data science components that must quickly process the information.
@@ -125,18 +126,8 @@
       <p class="mb-3">
       After finding the computer vision, Duke Energy began to consider automating the process. The company developed a MOVES model (Mobile Observation Vehicle and Equipment Solutions) that collects and processes the data and images from the drones and identifies the faults within minutes. Through applying AI and machine learning technologies, the program has significantly reduced labor and time costs for the company. Accuracy also continued to improve over the time; the latest model used in the inspection reached 91% accuracy. Duke Energy’s AI journey began because the utility company had a business problem to solve,  Duke Energy chief information officer Bonnie Titone told VentureBeat’s head of AI content strategy Hari Sivaraman at the Transform 2021 virtual conference on Thursday.
       </p>
-      <div id="floaterScript">
-<!--        <script async src="https://cdn.avantisvideo.com/avm/js/video-loader.js?id=4102c20e-d414-456e-897a-9a26f6d87257&tagId=98" id="avantisJS"> </script>-->
-      </div>
       <div id="hidden" style="display: none"></div>
-  <!--      The player script (with floater unit):-->
-<!--      <script async src="https://cdn.avantisvideo.com/avm/js/video-loader.js?id=4102c20e-d414-456e-897a-9a26f6d87257&tagId=98" id="avantisJS"> </script>-->
-<!--      The player script (without floater unit):-->
-<!--      <script async src="https://cdn.avantisvideo.com/avm/js/video-loader.js?id=4102c20e-d414-456e-897a-9a26f6d87257&tagId=99" id="avantisJS"> </script>-->
-
-
-
-  </main>
+    </main>
 
   <footer class="blog-footer">
     <p>InFrame by Avantis</p>
@@ -147,5 +138,4 @@
 </div>
   <script src="demoPage.js"></script>
 </body>
-
 </html>
