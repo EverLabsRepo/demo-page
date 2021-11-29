@@ -1,6 +1,9 @@
 .engineConfiguration{
   position: fixed;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   top: 0px;
   padding: 10px 15px 25px;
@@ -9,14 +12,22 @@
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
   z-index: 999;
 }
-.engineConfiguration>p{
-  display:inline;
+
+.leftSide, .rightSide {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+.rightSide > input, p, select  {
+  margin: 0 4px;
+}
+
 .engineConfiguration>select{
-  display:inline;
   border-radius: 4px;
   min-height: 25px;
 }
+
 .engineConfiguration>select:enabled{
   outline-color:rgb(146, 146, 255);
 }
@@ -38,14 +49,12 @@ div.article-content>*{
 }
 
 div#dataPointContainer{
-  margin-top: 5px;
-  margin-bottom: -5px;
-  display: inline-block;
+  font-family: 'Calibri', sans-serif;
 }
 
 p.dataPoint{
   display:inline;
-  font-size: 10px;
+  font-size: 13px;
 }
 span.dataPointValue{
   font-size: 13px;
@@ -88,12 +97,16 @@ div#primary{
   min-width: 100px;
 }
 
-.deviceTypeBar {
-  font-size: 10px;
+.deviceTypeBar, .runType {
+  font-size: 13px;
+}
+
+.runType {
+  margin: 0 8px;
 }
 
 .floater {
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .container {

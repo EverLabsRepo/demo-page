@@ -14,10 +14,10 @@ const types = {
   3: document.getElementById('hidden')
 }
 const pointsValues = {
-  0: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: 'green'},
-  1: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: 'green'},
+  0: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff'},
+  1: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff'},
   2: {spotsFound: 0, networkSpeed: 'Slow', networkSpeedColor: 'red'},
-  3: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: 'green'},
+  3: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff'},
 }
 
 

@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style/demoPage.css">
+  <link rel="stylesheet" href="style/fonts.css">
   <title>Demo Page</title>
   <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
@@ -26,32 +27,36 @@
     class="post-template-default single single-post postid-2704551 single-format-standard singular category-ai channel-ai AI"
     onload="onLoadPage()" id="body">
   <div id="engineConfiguration" class="engineConfiguration">
-    <p>User type:</p>
-    <select name="runType" onchange="changeVideoType()" id="runTypeBar">
-      <option value="fastScroller">Fast Scroller</option>
-      <option value="slowScroller">Slow Scroller</option>
-      <option value="slowInternet">Slow Internet</option>
-      <option value="nonHuman">Non-Human</option>
-    </select>
-    <div id="dataPointContainer">
-      <p class='dataPoint' style='display:none;'>Spots found:</p>
-      <span class="dataPointValue" id="dataPointValueSpotsFound" style='display:none;'>0</span>
-      <p class='dataPoint'>Ads per page:</p>
-      <span class="dataPointValue" id="dataPointValueAdsPerPage">0</span>
-      <p class='dataPoint'>Ad requests per page:</p>
-      <span class="dataPointValue" id="dataPointValueAdRequestsPerPage">0</span>
-      <p class='dataPoint'>Network speed:</p>
-      <span class="dataPointValue" id="dataPointValueNetworkSpeed">NA</span>
-      <p class='dataPoint'>Scroll speed:</p>
-      <span class="dataPointValue" id="dataPointValueScrollSpeed">0</span>
+    <div class="leftSide">
+      <p class='dataPoint'>User type:</p>
+      <select name="runType" class="runType" onchange="changeVideoType()" id="runTypeBar">
+        <option value="fastScroller">Fast Scroller</option>
+        <option value="slowScroller">Slow Scroller</option>
+        <option value="slowInternet">Slow Internet</option>
+        <option value="nonHuman">Non-Human</option>
+      </select>
+      <div id="dataPointContainer">
+        <p class='dataPoint' style='display:none;'>Spots found:</p>
+        <span class="dataPointValue" id="dataPointValueSpotsFound" style='display:none;'>0</span>
+        <p class='dataPoint'>Ads per page:</p>
+        <span class="dataPointValue" id="dataPointValueAdsPerPage">0</span>
+        <p class='dataPoint'>Ad requests per page:</p>
+        <span class="dataPointValue" id="dataPointValueAdRequestsPerPage">0</span>
+        <p class='dataPoint'>Network speed:</p>
+        <span class="dataPointValue" id="dataPointValueNetworkSpeed">NA</span>
+        <p class='dataPoint'>Scroll speed:</p>
+        <span class="dataPointValue" id="dataPointValueScrollSpeed">0</span>
+      </div>
     </div>
-    <label class="floater" for="floater">Floater</label>
-    <input type="checkbox" id="floater" name="floater" onclick="onClickFloater()" >
-    <p class="dataPoint">Device</p>
-    <select name="deviceType" id="deviceTypeBar" class="deviceTypeBar" onchange="getDevice(this)">
-      <option value="desktop">Desktop</option>
-      <option value="mobile">Mobile</option>
-    </select>
+    <div class="rightSide">
+      <label class="floater" for="floater">Floater:</label>
+      <input type="checkbox" id="floater" name="floater" onclick="onClickFloater()" >
+      <p class="dataPoint">Device:</p>
+      <select name="deviceType" id="deviceTypeBar" class="deviceTypeBar" onchange="getDevice(this)">
+        <option value="desktop">Desktop</option>
+        <option value="mobile">Mobile</option>
+      </select>
+    </div>
   </div>
 
   <div class="container-fluid">

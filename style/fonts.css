@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Calibri";
+  src: url("./../font/Calibri.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("./../font/Calibri_bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
