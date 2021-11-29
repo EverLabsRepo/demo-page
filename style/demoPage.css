@@ -11,12 +11,15 @@
   background: #fafafb;
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
   z-index: 999;
+  font-family: 'Calibri', sans-serif;
+  font-size: 13px;
 }
 
 .leftSide, .rightSide {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin: 4px;
 }
 
 .rightSide > input, p, select  {
