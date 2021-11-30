@@ -5,7 +5,7 @@
   <meta http-equiv="Cache-Control" content="no-store, max-age=0">
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="" id="myViewport">
   <link href="style/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style/demoPage.css">
   <link rel="stylesheet" href="style/fonts.css">
@@ -14,13 +14,6 @@
   <!-- Custom styles for this template -->
   <link href="style/blog.css" rel="stylesheet">
   <link href="style/device.css" rel="stylesheet">
-  <script>
-    function getDevice(selectObject) {
-      if (selectObject.value === 'mobile')
-      document.getElementById('body').classList.add('mobile')
-      else document.getElementById('body').classList.remove('mobile');
-    }
-  </script>
  </head>
 
   <body
@@ -48,7 +41,7 @@
       <label class="floater" for="floater">Floater:</label>
       <input type="checkbox" id="floater" name="floater" onclick="onClickFloater()" >
       <p class="dataPoint">Device:</p>
-      <select name="deviceType" id="deviceTypeBar" class="deviceTypeBar" onchange="getDevice(this)">
+      <select name="deviceType" id="deviceTypeBar" class="deviceTypeBar" onchange="setDevice(this)">
         <option value="desktop">Desktop</option>
         <option value="mobile">Mobile</option>
       </select>
