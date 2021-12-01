@@ -14,3 +14,13 @@
 .mobile .container-fluid {
   margin-top: 95px;
 }
+
+.mobile video, .mobile #AVplayer0, .mobile .loaded, .mobile #av-container, .mobile .avp-p-gui, .mobile #avntsPlayer0Container, .mobile #avantisContainer0 {
+  width: 338px!important;
+  height: 190px!important;
+}
+
+.mobile #avantisContainer0 > .avntsFloating {
+  right: unset;
+  transform: scale(0.7);
+}
