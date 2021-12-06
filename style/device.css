@@ -11,8 +11,8 @@
   width: 100%;
 }
 
-.mobile .container-fluid {
-  margin-top: 95px;
+.mobile.container-fluid {
+  margin-top: 62px;
 }
 
 .leftSide, .rightSide {

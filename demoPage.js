@@ -36,7 +36,7 @@ const onLoadPage = () => {
   let type = +localStorage.getItem('typeIndex');
   if (localStorage.getItem('mobile')) {
     // mvp.setAttribute('content','width=375');
-    document.getElementById('body').classList.add('mobile');
+    document.getElementById('page-body').classList.add('mobile');
     deviceTypeBar.selectedIndex = 1;
   } else {
     // mvp.setAttribute('content','width=device-width, initial-scale=1');
