@@ -4,7 +4,6 @@ const networkSpeedDisplay = document.getElementById('dataPointValueNetworkSpeed'
 const scrollSpeedDisplay = document.getElementById('dataPointValueScrollSpeed');
 const floater = document.getElementById('floater');
 const runType = document.getElementById('runTypeBar');
-const deviceTypeBar = document.getElementById('deviceTypeBar');
 const NO_FLOATER = 'https://cdn.avantisvideo.com/avm/js/video-loader.js?id=4102c20e-d414-456e-897a-9a26f6d87257&tagId=98';
 const FLOATER = 'https://cdn.avantisvideo.com/avm/js/video-loader.js?id=4102c20e-d414-456e-897a-9a26f6d87257&tagId=99';
 
@@ -14,6 +13,7 @@ const types = {
   2: document.getElementById('slowInternet'),
   3: document.getElementById('hidden')
 }
+
 const pointsValues = {
   0: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff'},
   1: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff'},
@@ -21,41 +21,38 @@ const pointsValues = {
   3: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff'},
 }
 
-
 function changeVideoType() {
   window.scroll(0, 0);
   const typeIndex = runType.selectedIndex;
-  localStorage.setItem('typeIndex', typeIndex);
   const video = document.getElementById('vid-container0') || '';
   types[typeIndex].append(video);
   setDataPointsValues(pointsValues[typeIndex].spotsFound, pointsValues[typeIndex].networkSpeed, pointsValues[typeIndex].networkSpeedColor);
 }
 
 const onLoadPage = () => {
-  let type = +localStorage.getItem('typeIndex');
-  if (localStorage.getItem('mobile')) {
-    document.getElementById('body').classList.add('mobile');
-    deviceTypeBar.selectedIndex = 1;
-  } else {
-    deviceTypeBar.selectedIndex = 0;
-  }
-  if (!JSON.parse(localStorage.getItem('floater'))) {
-    createScript(types[type], FLOATER);
+  const typeIndex = runType.selectedIndex;
+  if (!floater.checked) {
+    createScript(types[typeIndex], FLOATER);
     sessionStorage.setItem('d_avnts_target', {tag: 98})
     sessionStorage.setItem('m_avnts_target', {tag: 98})
   } else {
-    createScript(types[type], NO_FLOATER);
+    createScript(types[typeIndex], NO_FLOATER);
     sessionStorage.setItem('d_avnts_target', {tag: 99})
-    sessionStorage.setItem('m_avnts_target', {tag: 98})
+    sessionStorage.setItem('m_avnts_target', {tag: 99})
   }
-  floater.checked = JSON.parse(localStorage.getItem('floater'));
-  runType.selectedIndex = type;
-  setDataPointsValues(pointsValues[type].spotsFound, pointsValues[type].networkSpeed, pointsValues[type].networkSpeedColor);
+  setDataPointsValues(pointsValues[typeIndex].spotsFound, pointsValues[typeIndex].networkSpeed, pointsValues[typeIndex].networkSpeedColor);
+}
+
+const removePlayer = () => {
+  document.querySelectorAll("script#avantisJS, div[id^='vid-container'], div[id^='avantisContainer']").forEach((element) => {
+    element.parentElement?.removeChild(element);
+  });
+  delete window['avnts_player'];
 }
 
 const onClickFloater = () => {
-  localStorage.setItem('floater', !JSON.parse(localStorage.getItem('floater')));
-  window.location.reload(true);
+  removePlayer();
+  onLoadPage();
 }
 
 const createScript = (parent, url) => {
@@ -67,13 +64,12 @@ const createScript = (parent, url) => {
 
 const setDevice = (selectObject) => {
   if (selectObject.value === 'mobile') {
-    localStorage.setItem('mobile', true);
-    window.location.reload(true);
+    document.getElementById('body').classList.add('mobile');
+  } else {
+    document.getElementById('body').classList.remove('mobile');
   }
-  else {
-    localStorage.removeItem('mobile');
-    window.location.reload(true);
-  }
+  removePlayer();
+  onLoadPage();
 }
 
 function setDataPointsValues(spotsFound, networkSpeed, networkSpeedColor) {
