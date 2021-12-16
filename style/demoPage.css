@@ -1,4 +1,5 @@
 .engineConfiguration{
+  box-sizing: border-box;
   position: fixed;
   display: flex;
   align-items: center;
@@ -25,6 +26,8 @@
 .engineConfiguration p,
 .engineConfiguration select  {
   margin-right: 8px;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .dataPointContainer p {
@@ -120,6 +123,8 @@ div#primary{
 
 .container {
   max-width: 1000px;
+  margin-right:auto;
+  margin-left:auto;
 }
 
 .robotImg {
@@ -143,4 +148,41 @@ p {
   font-size: 14px;
   line-height: 38px;
   font-style: italic;
+}
+
+.bg-dark {
+  background-color: #212529;
+}
+
+@media (min-width: 768px) {
+  .pe-md-5 {
+    padding-right: 3rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .ps-md-5 {
+    padding-left: 3rem!important;
+  }
+}
+@media (min-width: 768px) {
+  .p-md-5 {
+    padding: 3rem !important;
+  }
+}
+
+.rounded {
+  border-radius: 0.25rem!important;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.p-4 {
+  padding: 1.5rem!important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
 }
