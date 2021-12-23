@@ -15,10 +15,10 @@ const types = {
 }
 
 const pointsValues = {
-  0: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff'},
-  1: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff'},
-  2: {spotsFound: 0, networkSpeed: 'Slow', networkSpeedColor: 'red'},
-  3: {spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff'},
+  0: { spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff' },
+  1: { spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff' },
+  2: { spotsFound: 0, networkSpeed: 'Slow', networkSpeedColor: 'red' },
+  3: { spotsFound: 0, networkSpeed: 'Fast', networkSpeedColor: '#1e90ff' },
 }
 
 function changeVideoType() {
@@ -33,12 +33,12 @@ const onLoadPage = () => {
   const typeIndex = runType.selectedIndex;
   if (!floater.checked) {
     createScript(types[typeIndex], FLOATER);
-    sessionStorage.setItem('d_avnts_target', {tag: 98})
-    sessionStorage.setItem('m_avnts_target', {tag: 98})
+    sessionStorage.setItem('d_avnts_target', { tag: 98 })
+    sessionStorage.setItem('m_avnts_target', { tag: 98 })
   } else {
     createScript(types[typeIndex], NO_FLOATER);
-    sessionStorage.setItem('d_avnts_target', {tag: 99})
-    sessionStorage.setItem('m_avnts_target', {tag: 99})
+    sessionStorage.setItem('d_avnts_target', { tag: 99 })
+    sessionStorage.setItem('m_avnts_target', { tag: 99 })
   }
   setDataPointsValues(pointsValues[typeIndex].spotsFound, pointsValues[typeIndex].networkSpeed, pointsValues[typeIndex].networkSpeedColor);
 }
@@ -51,6 +51,7 @@ const removePlayer = () => {
 }
 
 const onClickFloater = () => {
+  window.scroll(0, 0);
   removePlayer();
   onLoadPage();
 }
@@ -63,6 +64,7 @@ const createScript = (parent, url) => {
 }
 
 const setDevice = (selectObject) => {
+  window.scroll(0, 0);
   if (selectObject.value === 'mobile') {
     document.getElementById('body').classList.add('mobile');
   } else {
@@ -104,3 +106,8 @@ window.onscroll = function () {
   scrollSpeedDisplay.textContent = checkScrollSpeed();
   setTimeout(function () { scrollSpeedDisplay.textContent = 0; }, 800);
 };
+
+window.changeVideoType = changeVideoType;
+window.onLoadPage = onLoadPage;
+window.onClickFloater = onClickFloater;
+window.setDevice = setDevice;
